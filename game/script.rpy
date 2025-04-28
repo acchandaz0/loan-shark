@@ -1,5 +1,7 @@
 ﻿# The script of the game goes in this file.
 # The game starts here.
+
+# LEVEL 1 ----------
 label start:
     # 1:World Building #1
     scene bg_kage with Dissolve(5.0)
@@ -87,22 +89,64 @@ label start:
     # This ends the game.
     return
 
-# LEVEL 1 ----------
 label Bukittinggi:
     scene bg_kage2 with Dissolve(5.0)
+
     # 2: deskripsi bukittinggi
-    scene bg_bukittinggi
+    scene 17 with dissolve
+    "Bukittinggi adalah sebuah kota di provinsi Sumatera Barat, yang terletak di Dataran Tinggi Minangkabau. Dikenal dengan iklimnya yang sejuk dan pemandangan alamnya yang menakjubkan"
+    "Bukittinggi terkenal dengan arsitekturnya yang unik, terutama rumah-rumah tradisional Minangkabau dengan atapnya yang berbentuk tanduk kerbau. Jam Gadang (Menara Jam Gadang) di kota ini adalah landmark yang terkenal." 
+    "Bukittinggi juga merupakan pusat budaya bagi masyarakat Minangkabau, dengan warisan tarian, musik, dan kuliner tradisional yang kaya. "
 
     # 2: looking for a clue
-    scene bg_jamGadang
-    "Setelah melakukan perjalanan selama 2 hari, dengan punggung pegal, Raka tiba. Berdiri di pelataran Jam Gadang, menatap menara putih yang kokoh, jarumnya menunjuk waktu yang tak peduli pada keributan manusia di sekitarnya."
-    scene bg_notebook
+    scene bg_13 with dissolve
+    "Setelah melakukan perjalanan selama 2 hari, dengan punggung pegal, Raka tiba."
+    show raka bahagia belakang
+    raka "YEY AKHIRNYA SAMPAI"
+    scene 14 with dissolve
     "Raka membuka buku catatannya yang berisikan ciri-ciri pak ardi. Umur sekitar 50-an, rambut sedikit beruban dan klimis, sering pakai kemeja batik warna gelap, nada bicara halus, suka membawa tas jinjing kulit."
 
     # 2: looking for a clue #2
-
+    scene 15 with dissolve
+    show raka bertanya depan
+    "Raka membuka buku catatannya yang berisikan ciri-ciri pak ardi. Umur sekitar 50-an, rambut sedikit beruban dan klimis, sering pakai kemeja batik warna gelap, nada bicara halus, suka membawa tas jinjing kulit."
 
     # 2: asking local
+    scene 16 with dissolve
+    show raka normal depan at left
+    menu:
+        "Permisi bu..":
+            show penjual_souvenir at right with moveinright
+            penjual_souvenir "cari apa bang? murah nyo disini"
+
+    show penjual_souvenir at right
+
+    menu:
+        "Tas yang disitu ada warna lain bu?":
+            penjual_souvenir "ndak ada warna lain do bang, sama pulak kau kyk orang aneh satutu minggu lalu ha, ndak ada yg lain tp maksa pulak dia"
+            raka "orang aneh?"
+            penjual_souvenir "iyo, baju cakap orang mau ke nikahan tp datangnyo ke jam gadang. Rambut klimis pake batik lengan panjang"
+        "Saya mau cari orang bu...":
+            penjual_souvenir "mana den ingat macam itu. Banyak orang lewat sini"
+            raka "tapi orangnya eksentrik bu… rambut klimis, pakai batik juga biasanya"
+            penjual_souvenir "oh bapak itu?"
+
+    penjual_souvenir "kemarin tu orang maksa kali dia cari tas warna lain dan buat ribut pulak satu orang itu"
+    menu:
+        "ibu ingat tidak apa lagi yang orang itu bilang?":
+            penjual_souvenir "hmm, kayaknya ada satu hal aneh yang dia ucap"
+
+    menu:
+        "itu! Ibu ingat dia bilang apa?":
+            penjual_souvenir "kalau tak salah…. Bulat-bulat... Oh Bakso!"
+
+    menu:
+        "bakso?":
+            penjual_souvenir "saya sudah tak ingat lagi lah bang.."
+        "selain bakso, orang itu berkata apa lagi bu??":
+            penjual_souvenir "sudah tak ingat lah bang"
+
+    raka "terima kasih ya bu..."
 
     # 2: pindah kota
     menu:
@@ -113,19 +157,25 @@ label Bukittinggi:
         "Pergi ke Magelang":
             scene bg_kalah with Dissolve(15.0)
     
-
     return
 
 label Malang:
-    scene bg_kage3 with Dissolve(5.0)
+    scene bg_Level1_Chapter3 with Dissolve(5.0)
 
+    # 3: deskripsi malang
+    scene 18 with dissolve
+    "Malang adalah kota yang menawan di Jawa Timur, Indonesia, yang terkenal dengan iklimnya yang sejuk, arsitektur era kolonial, dan lingkungan pegunungan yang indah. "
+    "Kota ini merupakan tujuan populer bagi pecinta alam dan penggemar sejarah, dan juga merupakan rumah bagi beberapa universitas terkemuka, sehingga memberikan suasana pelajar yang hidup."
+    "Kuliner lokal Malang terkenal dengan Bakso Malang, yang menjadikannya makanan favorit di kalangan penduduk lokal dan pengunjung."
 
     return
 
 label Jayapura:
+    scene bg_Level1_Chapter4 with Dissolve(5.0)
     return
 
 label Pamekasan:
+    scene bg_Level1_Chapter5 with Dissolve(5.0)
     return
 
 # LEVEL 2 ----------
