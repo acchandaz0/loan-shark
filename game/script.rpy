@@ -173,7 +173,7 @@ label Bukittinggi:
     return
 
 label Malang:
-    scene bg_Level1_Chapter3 with Dissolve(5.0)
+    scene Level1_Chapter3 with Dissolve(5.0)
 
     # 3: deskripsi malang
     play music "cinematic.mp3" loop
@@ -243,7 +243,7 @@ label Malang:
     return
 
 label Jayapura:
-    scene bg_Level1_Chapter4 with Dissolve(5.0)
+    scene Level1_Chapter4 with Dissolve(5.0)
 
     # 4: deskripsi jayapura
     play music "cinematic.mp3" loop
@@ -301,16 +301,17 @@ label Jayapura:
     return
 
 label Pamekasan:
-    scene bg_Level1_Chapter5 with Dissolve(5.0)
+    scene Level1_Chapter5 with Dissolve(5.0)
 
     # 5: deskripsi Pamekasan
     play music "cinematic.mp3" loop
-    
+    scene 28 with dissolve
     "Madura adalah sebuah pulau yang terletak di lepas pantai timur laut Jawa, dan merupakan bagian dari Provinsi Jawa Timur di Indonesia. "
     "Dikenal dengan budayanya yang berbeda dan tradisi yang membanggakan, Madura sangat terkenal dengan Karapan Sapi, sebuah acara yang semarak dan kompetitif yang menarik perhatian penduduk lokal dan wisatawan. "
     "Pulau ini memiliki karakter maritim yang kuat, dengan banyak penduduknya yang terlibat dalam penangkapan ikan dan pertanian garam. Dalam hal makanan, Sate Madura adalah yang paling terkenal"
 
     # 5: karapan sapi
+    scene 29 with dissolve
     "Langit Madura menjelang sore tampak pucat keemasan, dan tanah lapang di pinggiran kota dipenuhi teriakan penonton, deru lonceng, serta semangat yang hampir bisa disentuh. Raka berdiri di antara kerumunan, menyaksikan karapan sapi pertama dalam hidupnya." 
     "Sepasang sapi berlomba di atas lintasan lumpur, ditunggangi joki kurus bersarung yang tampak lebih seperti penari daripada pembalap."
 
@@ -319,11 +320,13 @@ label Pamekasan:
 
     
     # 5: bus stop
+    scene 30 with dissolve
     "Di halte yang sunyi, Raka duduk sendiri. Ia membuka bungkus air mineral, meneguk seteguk besar, dan mencoba berdamai dengan rasa kecewa."
 
     stop music fadeout(0.5)
     play music "pak_ardi.mp3"
     # 5: pak ardi
+    scene 31 with dissolve
     "Namun tiba-tiba—seperti sulap yang tidak lucu—seorang pria yang sangat dikenalnya muncul dari tikungan: Pak Ardi."
     "Raka membeku. Napasnya tertahan. Ia segera bangkit dan melangkah cepat."
 
@@ -356,11 +359,16 @@ label Pamekasan:
 
 # LEVEL 2 ----------
 label Palembang:
+    scene Level2_Chapter1 with Dissolve(5.0)
+
     # 1: deskripsi Palembang
+    play music "cinematic.mp3" loop
+    scene 33 with dissolve
     "Palembang adalah ibu kota Provinsi Sumatera Selatan dan salah satu kota tertua di Indonesia, dengan sejarah yang berawal dari Kerajaan Sriwijaya yang kuat. Terletak di sepanjang Sungai Musi, Palembang sering disebut sebagai “Venesia dari Timur” karena banyaknya jembatan dan jalur air."
     "Jembatan Ampera sebagai landmark yang paling ikonik. Kota ini juga merupakan pusat budaya dan warisan Melayu. Kuliner khas Palembang adalah Pempek."
    
     # 1: stroling around
+    scene 34 with dissolve
     "Langit mulai terang saat Raka menjejakkan kaki di tepi Sungai Musi. Cahaya matahari makin lama makin menyilaukan, sementara Jembatan Ampera berdiri megah membelah aliran sungai yang tampak tenang namun penuh cerita."
 
     "Suasana kota ini terasa berbeda. Laju hidupnya tidak terburu-buru, tetapi tak pernah benar-benar diam. Deru perahu sungai bercampur dengan suara klakson, dan aroma pempek yang menguar dari warung pinggir jalan membuat perut Raka mulai memberontak."
@@ -368,15 +376,22 @@ label Palembang:
     "Namun perhatiannya teralihkan saat ia melihat seorang pria berambut ikal sebahu, mengenakan jaket kulit lusuh dan celana kargo kuning terang—benderang, sementara di tangannya memegang kamera analog. Ia memotret kapal yang sedang melintas di bawah Ampera"
     
     "Raka mendekat"
+    
+    stop music fadeout(0.5)
+    play music "conversation.mp3" loop
 
+    show raka bertanya depan at left with moveinleft
     menu:
         "Motret buat majalah fashion atau buat bukti pajak, mas?":
             mas_fotografer "Wah, dua-duanya bisa. Yang penting cahaya bagus dan objeknya nggak kabur."
         "Lagi ngapain mas?":
-            "lagi merancang ulang UUD 1945 hehe.... (memotret)"
+            mas_fotografer "lagi merancang ulang UUD 1945 hehe.... (memotret)"
 
     "Mereka tertawa ringan. Setelah obrolan singkat soal lensa, film, dan harga cuci cetak yang makin naik, Raka menanyakan tentang Pak Ardi."
 
+    scene 34
+    show raka normal depan at left 
+    show mas fotografer at right
     mas_fotografer "Hmm… Tunggu sebentar."
 
     "Pria itu membuka galeri kamera film yang telah dicetak, memperhatikan lembar demi lembar, hingga akhirnya menunjuk satu foto."
@@ -395,10 +410,13 @@ label Palembang:
     "Raka mengucapkan terima kasih dan segera menuju tempat yang dimaksud." 
 
     # 1: tabakoya
+    scene 35 with dissolve
     "Raka menemukan toko itu dengan mudah—sebuah warung mungil berdinding kayu, dengan deretan bungkus rokok tergantung di tali rafia."
     "Di dalamnya, seorang nenek duduk sambil membaca majalah gosip edisi 2016."
 
+    show raka normal depan at left
     raka "Permisi, Nek. Saya sedang mencari seseorang."
+    show nenek rokok at right
     tabakoya "Kalau nyari jodoh, nenek sudah pensiun, Nak."
     raka "Bukan, Nek. Orang ini... (menjelaskan ciri-ciri Pak Ardi)"
     "Nenek itu memicingkan mata, lalu tertawa kecil."
@@ -407,11 +425,14 @@ label Palembang:
     tabakoya "Katanya… dia ingin melihat kemegahan Borobudur. Katanya, candi itu bisa bikin siapa pun merasa kecil, termasuk ego sendiri."
 
     # 1: hitorigoto
-
+    stop music fadeout(0.5)
+    play music "cinematic.mp3"
+    scene 36 with dissolve
     "Raka mencatat dalam hati. Satu tempat lagi, satu langkah lebih dekat."
 
     "Ia menunduk memberi hormat pada sang nenek, lalu berjalan keluar, melewati Jembatan Ampera yang kini mulai dipadati kendaraan. Angin dari sungai berembus lebih kencang, seakan mendorongnya untuk segera melangkah."
 
+    
     menu:
         "Pergi ke Surabaya":
             play music "kalah.mp3"
@@ -428,16 +449,20 @@ label Palembang:
     return
 
 label Magelang:
+    scene Level2_Chapter2 with Dissolve(5.0)
     # 2: deskripsi Magelang
-
+    play music "cinematic.mp3" loop
+    scene 38 with dissolve
     "Magelang adalah sebuah kota di Jawa Tengah, Indonesia, yang terkenal dengan suasananya yang tenang dan pemandangannya yang indah. Dikelilingi oleh perbukitan dan persawahan yang subur, kota ini juga merupakan rumah bagi Candi Borobudur, situs Warisan Dunia UNESCO dan salah satu monumen Budha paling ikonik di dunia." 
     "Magelang menawarkan perpaduan antara keindahan alam dan kedalaman sejarah, menjadikannya tujuan wisata budaya yang signifikan di wilayah ini."
 
 
     # 2: bumped
+    scene 39 with dissolve
     "Sesampainya di kompleks Candi Borobudur, Raka terpaku. Di tengah riuh pengunjung yang sibuk berfoto dan mendaki, ia berdiri membeku seperti patung. Kepalanya menengadah, menatap kemegahan batu-batu tua yang tersusun membentuk cerita zaman lampau."
 
     "Belum sempat ia melangkah lebih jauh, tiba-tiba—"
+    stop music
     "BRUAKKKKKKK"
 
     "Seorang anak kecil dengan kaus bergambar kartun dinosaurus menangis setelah menabrak Raka. Di tangannya, kini hanya ada cone kosong. Es krimnya sudah berpulang ke bumi."
@@ -445,10 +470,16 @@ label Magelang:
     "Waduh, maaf banget, Dek. Kakak yang kurang awas. Sini, kakak beliin lagi."
 
     # 2: ice cream
+    scene 40 with dissolve
+    play music "conversation.mp3" loop
+
     "Beberapa menit kemudian, setelah membeli es krim, sang anak kini lebih tenang, menjilat es krim baru dengan semangat nasionalisme yang tinggi."
+    show bocil at right with dissolve
     bocil "Kakak baik deh, gak kayak bapak-bapak menyeramkan beberapa hari lalu..."
+    show raka bingung depan
     raka "Bapak-bapak menyeramkan?"
     bocil "Iya. Temanku waktu itu nabrak dia. Terus dia marah-marah sambil ngomel aneh."
+    show raka normal depan
     raka "Ngomel apa?"
 
     "Anak itu menirukan dengan ekspresi serius, menekankan setiap kata"
@@ -465,6 +496,7 @@ label Magelang:
     bocil "Kakak detektif ya?"
     raka "Belum tentu. Tapi yang jelas… aku sedang memburu lontong balap."
 
+    stop music fadeout(0.5)
     menu:
         "Pergi ke Surabaya":
             jump Surabaya
