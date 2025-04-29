@@ -5,7 +5,7 @@
 label start:
     # 1:World Building #1
     play music "opening.mp3"
-    scene bg_kage with Dissolve(5.0)
+    scene bg_chp1 with Dissolve(5.0)
     scene bg_desa with dissolve
     "Suatu Hari yang cerah di Klaten....."
 
@@ -96,7 +96,7 @@ label start:
     return
 
 label Bukittinggi:
-    scene bg_kage2 with Dissolve(5.0)
+    scene bg_chp2 with Dissolve(5.0)
 
     # 2: deskripsi bukittinggi
     play music "cinematic.mp3" loop
@@ -173,7 +173,7 @@ label Bukittinggi:
     return
 
 label Malang:
-    scene Level1_Chapter3 with Dissolve(5.0)
+    scene bg_chp3 with Dissolve(5.0)
 
     # 3: deskripsi malang
     play music "cinematic.mp3" loop
@@ -243,7 +243,7 @@ label Malang:
     return
 
 label Jayapura:
-    scene Level1_Chapter4 with Dissolve(5.0)
+    scene bg_chp4 with Dissolve(5.0)
 
     # 4: deskripsi jayapura
     play music "cinematic.mp3" loop
@@ -301,7 +301,7 @@ label Jayapura:
     return
 
 label Pamekasan:
-    scene Level1_Chapter5 with Dissolve(5.0)
+    scene bg_chp5 with Dissolve(5.0)
 
     # 5: deskripsi Pamekasan
     play music "cinematic.mp3" loop
@@ -360,7 +360,7 @@ label Pamekasan:
 
 # LEVEL 2 ----------
 label Palembang:
-    scene bg_Level2_Chapter1 with Dissolve(5.0)
+    scene bg_chp6 with Dissolve(5.0)
 
     # 1: deskripsi Palembang
     play music "cinematic.mp3" loop
@@ -451,7 +451,7 @@ label Palembang:
     return
 
 label Magelang:
-    scene kaageda with Dissolve(5.0)
+    scene bg_chp7 with Dissolve(5.0)
 
     # 2: deskripsi Magelang
     play music "cinematic.mp3" loop
