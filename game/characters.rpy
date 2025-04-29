@@ -19,7 +19,7 @@ image raka bertanya depan = "raka_bertanya_dpn"
 image mystery cewe = "chr_female"
 image mystery cowo = "chr_male"
 
-image tetangga normal = "chr_banteng"
+image tetangga = "chr_banteng"
 
 image penjual souvenir = "chr_minangian"
 

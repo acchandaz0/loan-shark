@@ -52,7 +52,7 @@ label start:
     "Ia terdiam, hingga heningnya dipecahkan"
 
     # 1: Perbincangan Awal: 1
-    show mystery cewe at right with moveinright 
+    show tetangga at right with moveinright 
     stop music fadeout(2.0)
     play music "conversation.mp3" fadein(1.0) loop
     mystery_cewe "Mas...."
@@ -110,12 +110,15 @@ label Bukittinggi:
     "Setelah melakukan perjalanan selama 2 hari, dengan punggung pegal, Raka tiba."
     show raka bahagia belakang
     raka "YEY AKHIRNYA SAMPAI"
+
+    # 2: looking for a clue #2
     scene 14 with dissolve
     "Raka membuka buku catatannya yang berisikan ciri-ciri pak ardi. Umur sekitar 50-an, rambut sedikit beruban dan klimis, sering pakai kemeja batik warna gelap, nada bicara halus, suka membawa tas jinjing kulit."
 
-    # 2: looking for a clue #2
     scene 15 with dissolve
-    "Raka membuka buku catatannya yang berisikan ciri-ciri pak ardi. Umur sekitar 50-an, rambut sedikit beruban dan klimis, sering pakai kemeja batik warna gelap, nada bicara halus, suka membawa tas jinjing kulit."
+    show raka bingung depan
+    "Raka menyusuri area sekitar menara, memperhatikan pedagang dan pengunjung. Matanya berhenti pada seorang pedagang yang menjual banyak jenis souvenir. Banyaknya jenis souvenir bisa-bisa membuatmu pusing hanya dengan berada di sana."
+
     stop music fadeout(0.5)
     # 2: asking local
     scene 16 with dissolve
@@ -123,10 +126,10 @@ label Bukittinggi:
     show raka normal depan at left
     menu:
         "Permisi bu..":
-            show penjual_souvenir at right with moveinright
+            show penjual souvenir at right with moveinright
             penjual_souvenir "cari apa bang? murah nyo disini"
 
-    show penjual_souvenir at right
+    show penjual souvenir at right
 
     menu:
         "Tas yang disitu ada warna lain bu?":
@@ -180,20 +183,25 @@ label Malang:
     "Kuliner lokal Malang terkenal dengan Bakso Malang, yang menjadikannya makanan favorit di kalangan penduduk lokal dan pengunjung."
 
     # 3: After the rain
+    scene 19 with dissolve
     "Hujan baru saja reda saat Raka turun dari angkot terakhirnya. Kabut tipis masih menggantung rendah di atas aspal, meninggalkan aroma tanah basah yang bercampur dengan wangi bensin."
     "Jalanan utama cukup ramai, motor, mobil, dan ojek berseliweran seperti parade tak resmi."
 
     # 3: after the rain #2
+    scene 20 with dissolve
     "Begitu Raka berbelok memasuki jalan pintas, suara klakson memudar, digantikan suara sepatu menapak genangan dan desau angin yang menyusup lewat sela ranting."
     
     # 3: topeng
+    scene 21 with dissolve
     "Di jalan, Raka menemui posko dengan beberapa topeng yang bergantung di dinding anyaman."
 
     # 3: asking local
-
+    scene 22 with dissolve
     "Gerobak bakso terlihat di ujung jalan. Asap mengepul, suara kuah mendidih bersahutan dengan obrolan pelanggan."
     stop music fadeout(0.5)
     play music "conversation.mp3" fadein(1.0) loop
+    show raka normal depan at left with moveinleft
+    show penjual bakso at right with dissolve
     menu:
         "bakso 1 porsi pak":
             penjual_bakso "disini ga dijual per porsi mas… masnya pilih aja nanti tak itung e berapa"
@@ -239,12 +247,14 @@ label Jayapura:
 
     # 4: deskripsi jayapura
     play music "cinematic.mp3" loop
+    scene 23 with dissolve
     "Jayapura adalah ibu kota Provinsi Papua yang terletak di bagian paling timur Indonesia. "
     "Terletak di antara perbukitan dan garis pantai Pasifik, Jayapura dikenal dengan keindahan alamnya yang memukau, dengan panorama laut dan lanskap hijau yang subur. "
     "Sebagai pintu gerbang ke Papua, kota ini memadukan tradisi lokal Papua dengan pembangunan modern. Jayapura memainkan peran penting dalam pemerintahan daerah dan pendidikan,"
     "dan berfungsi sebagai jembatan budaya antara masyarakat asli Papua dan daerah lain di Indonesia. Hidangan lokal yang terkenal adalah Papeda, bubur sagu lengket yang biasanya disajikan "
 
     # 4: explore
+    scene 24 with dissolve
     "Kota ini cukup ramai, namun tidak sampai membuat suasana terasa sesak. Lalu lintas berjalan padat namun teratur. Bunyi klakson terdengar sesekali, namun tidak mendominasi." 
     "Raka duduk di sebuah bangku beton di dekat taman kecil. Ia melepas tas dari bahunya dan menyandarkan tubuh, mencoba mengusir lelah yang mulai menumpuk setelah perjalanan yang tidak sebentar."
 
@@ -252,16 +262,19 @@ label Jayapura:
     "Di belakang gerobak, berdiri seorang pria sibuk menuangkan sagu ke dalam mangkuk."
 
     # 4: asking local
+    scene 25 with dissolve
     stop music fadeout(0.5)
     play music "conversation.mp3" fadein(1.0) loop
     "Raka menghampiri dan duduk di kursi plastik yang tersedia."
 
+    show raka normal depan at left with moveinleft
     raka "Papeda satu, Pak."
 
     menu:
         "Bapak pernah lihat orang dengan umur sekitar 50-an, rambut klimis, kemeja batik gelap, suka manggil \"Mas\" ke semua orang?":
             "Pedagang itu mengerutkan dahi sejenak, lalu mengangguk."
 
+    show penjual papeda at right with moveinright
     penjual_papeda "Iya. Dia makan di sini minggu lalu."
     penjual_papeda "Saya sempat bingung apa ada acara di dekat sini ya? Orang itu pakai baju rapi"
 
@@ -292,6 +305,7 @@ label Pamekasan:
 
     # 5: deskripsi Pamekasan
     play music "cinematic.mp3" loop
+    
     "Madura adalah sebuah pulau yang terletak di lepas pantai timur laut Jawa, dan merupakan bagian dari Provinsi Jawa Timur di Indonesia. "
     "Dikenal dengan budayanya yang berbeda dan tradisi yang membanggakan, Madura sangat terkenal dengan Karapan Sapi, sebuah acara yang semarak dan kompetitif yang menarik perhatian penduduk lokal dan wisatawan. "
     "Pulau ini memiliki karakter maritim yang kuat, dengan banyak penduduknya yang terlibat dalam penangkapan ikan dan pertanian garam. Dalam hal makanan, Sate Madura adalah yang paling terkenal"
