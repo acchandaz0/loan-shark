@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 47: expected 'image_name_component' not found.
-    show  with dissolve
-        ^
+File "game/script.rpy", line 196: expected simple expression
+    stop music fadeout
+                      ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Tue Apr 29 09:00:27 2025
+Tue Apr 29 21:41:58 2025
