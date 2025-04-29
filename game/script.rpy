@@ -106,7 +106,7 @@ label Bukittinggi:
     "Bukittinggi juga merupakan pusat budaya bagi masyarakat Minangkabau, dengan warisan tarian, musik, dan kuliner tradisional yang kaya. "
 
     # 2: looking for a clue
-    scene bg_13 with dissolve
+    scene 13 with dissolve
     "Setelah melakukan perjalanan selama 2 hari, dengan punggung pegal, Raka tiba."
     show raka bahagia belakang
     raka "YEY AKHIRNYA SAMPAI"
@@ -335,6 +335,7 @@ label Pamekasan:
     "Pak Ardi terkejut. Matanya membelalak, dan dalam sepersekian detik, ia berlari menuju bus yang baru datang. Tanpa sepatah kata pun, tanpa menoleh ke belakang."
 
     "Raka mengejar, namun hanya sempat mencapai pintu bus saat kendaraan itu sudah mulai melaju."
+    stop music
 
     "Masih terengah, Raka menghampiri orang yang juga sedang menunggu bus selanjutnya."
 
@@ -359,7 +360,7 @@ label Pamekasan:
 
 # LEVEL 2 ----------
 label Palembang:
-    scene Level2_Chapter1 with Dissolve(5.0)
+    scene bg_Level2_Chapter1 with Dissolve(5.0)
 
     # 1: deskripsi Palembang
     play music "cinematic.mp3" loop
@@ -438,9 +439,10 @@ label Palembang:
             play music "kalah.mp3"
             scene bg_black
             scene bg_kalah with Dissolve(25.0)
-        "Pergi ke Banten":
+        "Pergi ke Yogyakarta":
             play music "kalah.mp3"
             scene bg_black
+            "Gue kecewa sob..."
             scene bg_kalah with Dissolve(25.0)
         "Pergi ke Magelang":
             jump Magelang
@@ -449,7 +451,8 @@ label Palembang:
     return
 
 label Magelang:
-    scene Level2_Chapter2 with Dissolve(5.0)
+    scene kaageda with Dissolve(5.0)
+
     # 2: deskripsi Magelang
     play music "cinematic.mp3" loop
     scene 38 with dissolve
@@ -476,10 +479,12 @@ label Magelang:
     "Beberapa menit kemudian, setelah membeli es krim, sang anak kini lebih tenang, menjilat es krim baru dengan semangat nasionalisme yang tinggi."
     show bocil at right with dissolve
     bocil "Kakak baik deh, gak kayak bapak-bapak menyeramkan beberapa hari lalu..."
-    show raka bingung depan
+    show raka bingung depan at left
     raka "Bapak-bapak menyeramkan?"
     bocil "Iya. Temanku waktu itu nabrak dia. Terus dia marah-marah sambil ngomel aneh."
-    show raka normal depan
+    scene 40
+    show raka normal depan at left
+    show bocil at right
     raka "Ngomel apa?"
 
     "Anak itu menirukan dengan ekspresi serius, menekankan setiap kata"
