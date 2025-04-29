@@ -7,12 +7,12 @@ define penjual_bakso = Character("Penjual Bakso")
 define penjual_papeda = Character("penjual Papeda")
 
 
-image raka normal depan = "raka_normal_depan"
-image raka kecewa belakang = "raka_kecewa_belakang"
-image raka capek depan = "raka_capek_depan"
-image raka bingung depan = "raka_bingung_depan"
-image raka bahagia belakang = "raka_bahagia_belakang"
-image raka bertanya depan = "raka_bertanya_depan"
+image raka normal depan = "raka_normal_dpn"
+image raka kecewa belakang = "raka_kecewa_blkg"
+image raka capek depan = "raka_capek_dpn"
+image raka bingung depan = "raka_bingung_dpn"
+image raka bahagia belakang = "raka_bahagia_blkg"
+image raka bertanya depan = "raka_bertanya_dpn"
 
 # image mystery cewe = 
 # image mystery cowo =

@@ -57,7 +57,7 @@ label start:
 
     # 1: Breaking the silence: 2
     scene bg_rumah2 with dissolve
-    show raka_normal_depan at left
+    show raka normal depan at left
     show tetangga at right with moveinright
     tetangga "Mas nyari Pak Ardi ya?"
     menu:

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 77: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "menuju ke Kota Bukittinggi"
-                                ^
+File "game/script.rpy", line 47: expected 'image_name_component' not found.
+    show  with dissolve
+        ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Sun Apr 27 18:38:12 2025
+Tue Apr 29 09:00:27 2025
